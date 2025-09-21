@@ -1,2 +1,2 @@
 # HelenaGPT
-Custom LM will power HelenaAI
+Stupid custom LM that will maybe power HelenaAI
