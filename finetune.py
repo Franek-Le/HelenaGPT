@@ -3,7 +3,7 @@ import os
 import time
 import datetime
 import tiktoken
-from GPTv2 import GPT, start_epoch
+from GPTv2 import HelenaGPT, start_epoch
 
 # ---------------- Hyperparameters ---------------- #
 batch_size = 32
@@ -55,7 +55,7 @@ def estimate_loss(model):
 
 # ---------------- Finetuning ---------------- #
 if __name__ == "__main__":
-    model = GPT().to(device)
+    model = HelenaGPT().to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
     scaler = torch.amp.GradScaler('cuda')
 
@@ -91,4 +91,5 @@ if __name__ == "__main__":
     torch.save(model.state_dict(), f"models/{model_name}/{model_name}_finetuned_v2.pth")
     print(f"Finetuning complete. Final model saved.")
     print(f"Duration: {(time.perf_counter() - start) / 60:.2f} minutes")
+
 
