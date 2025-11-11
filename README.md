@@ -1,2 +1,2 @@
 # HelenaGPT
-Code for the stupid custom LM that will maybe power HelenaAI.
+To nie jest Artificial Inteligence to jest Artificial Stupidity
